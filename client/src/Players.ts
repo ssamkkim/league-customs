@@ -8,7 +8,7 @@ interface Player {
   playerLink: string;
 }
 
-export let players: Player[] = [
+export const players: Player[] = [
   {
     rank: 1,
     name: 'parm',

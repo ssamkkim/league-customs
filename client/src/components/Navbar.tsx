@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="p-3 flex justify-center items-center uppercase font-bold font-sans text-sm tracking-wider">
-      <a href="/" className="p-1 mx-1">
+      <Link to="/" className="p-1 mx-1">
         S2
-      </a>
-      <a href="/" className="p-1 mx-1">
+      </Link>
+      <Link to="/" className="p-1 mx-1">
         Leaderboard
-      </a>
-      <a href="/" className="p-1 mx-1">
+      </Link>
+      <Link to="/match-history" className="p-1 mx-1">
         Match History
-      </a>
+      </Link>
     </nav>
   );
 };
