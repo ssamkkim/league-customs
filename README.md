@@ -75,20 +75,6 @@ $ npm run dev
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+- Website [http://samuel-kim-portfolio.netlify.app/](http://samuel-kim-portfolio.netlify.app/)
+- GitHub [@ssamkkim](https://github.com/ssamkkim)
+- Twitter [@scammoXX](https://twitter.com/scammoXX)
