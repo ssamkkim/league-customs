@@ -12,38 +12,38 @@ export interface Database {
       matches: {
         Row: {
           id: number;
-          data: Json | null;
+          data: Json;
         };
         Insert: {
           id?: number;
-          data?: Json | null;
+          data: Json;
         };
         Update: {
           id?: number;
-          data?: Json | null;
+          data?: Json;
         };
       };
       players: {
         Row: {
           id: number;
-          rank: number | null;
-          name: string | null;
-          games_won: number | null;
-          games_played: number | null;
+          rank: number;
+          name: string;
+          games_won: number;
+          games_played: number;
         };
         Insert: {
           id?: number;
-          rank?: number | null;
-          name?: string | null;
-          games_won?: number | null;
-          games_played?: number | null;
+          rank: number;
+          name: string;
+          games_won: number;
+          games_played: number;
         };
         Update: {
           id?: number;
-          rank?: number | null;
-          name?: string | null;
-          games_won?: number | null;
-          games_played?: number | null;
+          rank?: number;
+          name?: string;
+          games_won?: number;
+          games_played?: number;
         };
       };
     };
