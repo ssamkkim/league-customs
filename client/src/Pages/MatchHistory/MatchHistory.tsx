@@ -1,9 +1,9 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 
-import { supabase } from '../client';
-import { Match, matches, Participant } from '../Matches';
-import type { matchesData } from '../types';
-import Navbar from './Navbar';
+import Navbar from '../../components/Navbar';
+import { Match, matches, Participant } from '../../dummy_data/matches';
+import { supabase } from '../../services/supabase';
+import type { matchesData } from '../../types/databaseTypes';
 
 const MatchHistory = () => {
   const [matchData, setMatchData] = useState<matchesData[] | null>();

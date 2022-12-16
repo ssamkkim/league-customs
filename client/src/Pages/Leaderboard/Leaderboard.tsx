@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { players } from '../Players';
+import { players } from '../../dummy_data/players';
 
 const Leaderboard = () => {
   return (

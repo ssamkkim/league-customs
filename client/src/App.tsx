@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import Leaderboard from './components/Leaderboard';
 import Navbar from './components/Navbar';
+import Leaderboard from './Pages/Leaderboard/Leaderboard';
 
 function App() {
   return (

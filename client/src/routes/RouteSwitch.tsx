@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import App from './App';
-import MatchHistory from './components/MatchHistory';
-import PlayerPage from './components/PlayerPage';
+import App from '../App';
+import MatchHistory from '../Pages/MatchHistory/MatchHistory';
+import PlayerPage from '../Pages/PlayerPage/PlayerPage';
 
 const RouteSwitch = () => {
   return (
