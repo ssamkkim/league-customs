@@ -57,7 +57,7 @@ $ npm run dev
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-- 
+- [ReplayBook](https://www.fraxiinus.dev/ReplayBook/): Software used to get League of Legends match data for custom games 
 
 ## Contact
 
