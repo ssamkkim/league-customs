@@ -46,8 +46,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 ```bash
 # Clone this repository
 $ git clone git@github.com:ssamkkim/league-customs.git
+
 # Install dependencies
 $ npm install
+
 # Run the app
 $ npm run dev
 ```
@@ -55,7 +57,6 @@ $ npm run dev
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
 - 
 
 ## Contact
