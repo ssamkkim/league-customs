@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import Navbar from '../../components/Navbar';
-import { Match, matches, Participant } from '../../dummy_data/matches';
 import { supabase } from '../../services/supabase';
 import type { matchesData } from '../../types/databaseTypes';
 import { sortMatch } from './sortMatch';

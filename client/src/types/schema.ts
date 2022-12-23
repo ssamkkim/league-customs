@@ -26,21 +26,18 @@ export interface Database {
       players: {
         Row: {
           id: number;
-          rank: number;
           name: string;
           games_won: number;
           games_played: number;
         };
         Insert: {
           id?: number;
-          rank: number;
           name: string;
           games_won: number;
           games_played: number;
         };
         Update: {
           id?: number;
-          rank?: number;
           name?: string;
           games_won?: number;
           games_played?: number;
