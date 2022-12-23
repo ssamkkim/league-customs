@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { json } from 'stream/consumers';
 
-import { players } from '../../dummy_data/players';
 import { supabase } from '../../services/supabase';
 import type { playerData } from '../../types/databaseTypes';
 import PlayerRow from './PlayerRow';
@@ -32,7 +30,14 @@ const Leaderboard = () => {
           <td className="py-4 px-5">Games Played</td>
         </tr>
         {playerData && playerData.length
-          ? playerData.map((player) => <PlayerRow props={player} />)
+          ? playerData.map((player) => (
+              <PlayerRow
+                id={player.id}
+                name={player.name}
+                games_won={player.games_won}
+                games_played={player.games_played}
+              />
+            ))
           : null}
       </table>
     </div>
