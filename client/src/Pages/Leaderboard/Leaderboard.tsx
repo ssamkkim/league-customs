@@ -27,12 +27,9 @@ const Leaderboard = () => {
         <tr className="font-medium tracking-wide border border-collapse border-[#1C1C1F] bg-[#31313C] text-gray-300">
           <td className="py-4 px-5">#</td>
           <td className="py-4 pr-32">Player</td>
-          {/* <td className="py-4 pr-32">LP</td> */}
-          {/* <td className="py-4 px-5">Win Rate</td> */}
-          {/* <td className="py-4 px-5">Games Won</td>
-          <td className="py-4 px-5">Games Lost</td> */}
+          <td className="py-4 px-5">Win Rate</td>
+          <td className="py-4 px-5">Win - Loss</td>
           <td className="py-4 px-5">Games Played</td>
-          {/* <td className="py-4 px-5">Tier</td> */}
         </tr>
         {playerData && playerData.length
           ? playerData.map((player) => <PlayerRow props={player} />)

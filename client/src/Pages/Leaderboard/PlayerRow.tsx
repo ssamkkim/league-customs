@@ -12,7 +12,14 @@ const PlayerRow = (props: any) => {
           <div className="w-full h-full">{props.props.name}</div>
         </a>
       </td>
-      {/* <td className="py-4 px-5">{props.props.winRate}%</td> */}
+      <td className="py-4 px-5">
+        {`${((props.props.games_won / props.props.games_played) * 100).toFixed(
+          0
+        )}%`}
+      </td>
+      <td className="py-4 px-5">{`${props.props.games_won}W ${
+        props.props.games_played - props.props.games_won
+      }L`}</td>
       <td className="py-4 px-5">{props.props.games_played}</td>
       {/* <td className="py-4 px-5">{props.}</td> */}
     </tr>
