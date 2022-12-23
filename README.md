@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-url-to-the-link}">
+    <a href="https://league-customs.netlify.app/">
       Link
     </a>
   </h3>
@@ -35,7 +35,9 @@
 
 ## Features
 
-...
+- Leaderboard
+- Match History
+- ...
 
 ## How To Use
 
@@ -57,7 +59,8 @@ $ npm run dev
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-- [ReplayBook](https://www.fraxiinus.dev/ReplayBook/): Software used to get League of Legends match data for custom games 
+
+- [ReplayBook](https://www.fraxiinus.dev/ReplayBook/): Software used to get League of Legends match data for custom games
 
 ## Contact
 
