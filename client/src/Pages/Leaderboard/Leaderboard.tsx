@@ -43,7 +43,7 @@ const Leaderboard = () => {
       <h1 className="mb-5 font-sans text-4xl font-bold tracking-wider text-left">
         Leaderboard
       </h1>
-      <table className="border border-collapse border-[#1C1C1F]">
+      <table className="border border-collapse border-[#1C1C1F] mb-10">
         <tr className="font-medium tracking-wide border border-collapse border-[#1C1C1F] bg-[#31313C] text-gray-300">
           <td className="py-4 px-5">#</td>
           <td className="py-4 pr-32">Player</td>
