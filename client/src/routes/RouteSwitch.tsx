@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from '../App';
+import Match from '../Pages/Match/Match';
 import MatchHistory from '../Pages/MatchHistory/MatchHistory';
-import PlayerPage from '../Pages/PlayerPage/PlayerPage';
+import Player from '../Pages/Player/Player';
 
 const RouteSwitch = () => {
   return (
@@ -11,7 +12,8 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/match-history" element={<MatchHistory />} />
-        <Route path="/player/:name" element={<PlayerPage />} />
+        <Route path="/player/:name" element={<Player />} />
+        <Route path="/match/:id" element={<Match />} />
       </Routes>
     </BrowserRouter>
   );
