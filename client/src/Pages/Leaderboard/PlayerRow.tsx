@@ -23,7 +23,6 @@ const PlayerRow: PlayerRowComponent = ({
         games_played - games_won
       }L`}</td>
       <td className="py-4 px-5">{games_played}</td>
-      {/* <td className="py-4 px-5">{props.}</td> */}
     </tr>
   );
 };
