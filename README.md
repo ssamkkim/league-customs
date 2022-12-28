@@ -33,6 +33,7 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
+- [Supabase](https://supabase.com/)
 
 ## Features
 
