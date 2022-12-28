@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Team from './Team';
 
 export const sortMatch = (match: any): React.ReactElement => {
@@ -32,12 +34,15 @@ export const sortMatch = (match: any): React.ReactElement => {
     }
   });
   return (
-    <div className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto">
+    <Link
+      className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto"
+      to={`/match/${match.data.matchId}`}
+    >
       <Team props={winTeam} />
       <div className="text-2xl font-bold tracking-wide">
         <span className="text-blue-800">1</span>-0
       </div>
       <Team props={loseTeam} />
-    </div>
+    </Link>
   );
 };
