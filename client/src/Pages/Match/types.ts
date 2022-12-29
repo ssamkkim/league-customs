@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 import { Participant } from '../../types/schema';
 
-type Team = {
+export type Team = {
   team: Participant[];
 };
 
