@@ -6,8 +6,8 @@ import { Participant } from '../../types/schema';
 import Team from './Team';
 
 export const sortMatch = (match: matchesData): React.ReactElement => {
-  let winTeam = new Array(5);
-  let loseTeam = new Array(5);
+  let winTeam = new Array<Participant>(5);
+  let loseTeam = new Array<Participant>(5);
   match.data.participants.map((player: Participant) => {
     let position = 0;
     switch (player.INDIVIDUAL_POSITION) {
@@ -40,11 +40,11 @@ export const sortMatch = (match: matchesData): React.ReactElement => {
       className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto"
       to={`/match/${match.id}`}
     >
-      <Team props={winTeam} />
+      <Team players={winTeam} />
       <div className="text-2xl font-bold tracking-wide">
         <span className="text-blue-800">1</span>-0
       </div>
-      <Team props={loseTeam} />
+      <Team players={loseTeam} />
     </Link>
   );
 };
