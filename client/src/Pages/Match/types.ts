@@ -6,4 +6,4 @@ type Team = {
   team: Participant[];
 };
 
-export type TeamComponent = FunctionComponent<Team>;
+export type MatchTeamComponent = FunctionComponent<Team>;

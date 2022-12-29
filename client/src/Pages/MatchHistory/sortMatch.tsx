@@ -40,11 +40,11 @@ export const sortMatch = (match: matchesData): React.ReactElement => {
       className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto"
       to={`/match/${match.id}`}
     >
-      <Team players={winTeam} />
+      <Team team={winTeam} />
       <div className="text-2xl font-bold tracking-wide">
         <span className="text-blue-800">1</span>-0
       </div>
-      <Team players={loseTeam} />
+      <Team team={loseTeam} />
     </Link>
   );
 };

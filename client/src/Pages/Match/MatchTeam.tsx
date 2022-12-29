@@ -1,8 +1,9 @@
 import React from 'react';
-import { Participant } from '../../types/schema';
-import { TeamComponent } from './types';
 
-const Team: TeamComponent = ({ team }) => {
+import { Participant } from '../../types/schema';
+import { MatchTeamComponent } from './types';
+
+const MatchTeam: MatchTeamComponent = ({ team }) => {
   return (
     <div className="flex flex-row">
       {team.map((player: Participant) => (
@@ -20,4 +21,4 @@ const Team: TeamComponent = ({ team }) => {
   );
 };
 
-export default Team;
+export default MatchTeam;
