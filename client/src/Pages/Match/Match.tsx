@@ -57,9 +57,9 @@ const Match = () => {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
-        <div>
-          <MatchTeam team={team1} />
-          <MatchTeam team={team2} />
+        <div className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-3/4 mx-auto">
+          <MatchTeam team={team1} isLeft={true} />
+          <MatchTeam team={team2} isLeft={false} />
         </div>
       );
     }
