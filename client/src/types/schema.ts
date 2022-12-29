@@ -6,21 +6,42 @@ export type Json =
   | { [key: string]: Json }
   | Json[];
 
+export type Match = {
+  matchId: string;
+  gameVersion: string;
+  gameDuration: number;
+  participants: Participant[];
+};
+
+export type Participant = {
+  ASSISTS: string;
+  BOUNTY_LEVEL?: string;
+  CHAMPIONS_KILLED: string;
+  GOLD_EARNED: string;
+  INDIVIDUAL_POSITION: string;
+  MINIONS_KILLED: string;
+  NAME: string;
+  NEUTRAL_MINIONS_KILLED: string;
+  NUM_DEATHS: string;
+  SKIN: string;
+  WIN: string;
+};
+
 export interface Database {
   public: {
     Tables: {
       matches: {
         Row: {
           id: number;
-          data: Json;
+          data: Match;
         };
         Insert: {
           id?: number;
-          data: Json;
+          data: Match;
         };
         Update: {
           id?: number;
-          data?: Json;
+          data?: Match;
         };
       };
       players: {

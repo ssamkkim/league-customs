@@ -14,7 +14,6 @@ const Leaderboard = () => {
   async function fetchMatches() {
     const { data, error } = await supabase.from('players').select('*');
     setPlayerData(data);
-    console.log(data);
   }
 
   const compare = (a: playerData, b: playerData) => {

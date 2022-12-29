@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { matchesData } from '../../types/databaseTypes';
+import { Participant } from '../../types/schema';
 
 import Team from './Team';
 
-export const sortMatch = (match: any): React.ReactElement => {
+export const sortMatch = (match: matchesData): React.ReactElement => {
   let winTeam = new Array(5);
   let loseTeam = new Array(5);
-  match.data.participants.map((player: any) => {
+  match.data.participants.map((player: Participant) => {
     let position = 0;
     switch (player.INDIVIDUAL_POSITION) {
       case 'TOP':
@@ -36,7 +38,7 @@ export const sortMatch = (match: any): React.ReactElement => {
   return (
     <Link
       className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto"
-      to={`/match/${match.data.matchId}`}
+      to={`/match/${match.id}`}
     >
       <Team props={winTeam} />
       <div className="text-2xl font-bold tracking-wide">
