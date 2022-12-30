@@ -57,17 +57,22 @@ const Match = () => {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
-        <div className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-3/4 mx-auto">
-          <MatchTeam team={team1} isLeft={true} />
-          <MatchTeam team={team2} isLeft={false} />
+        <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-3/5 mx-auto">
+          <div className="flex flex-row justify-between items-center my-10">
+            <MatchTeam team={team1} isLeft={true} />
+            <MatchTeam team={team2} isLeft={false} />
+          </div>
         </div>
       );
     }
   };
 
   return (
-    <div className="bg-[#F2F2F2] h-screen overflow-y-scroll">
+    <div className="flex flex-col items-center bg-[#F2F2F2] h-screen overflow-y-scroll">
       <Navbar />
+      <h1 className="mb-5 font-sans text-4xl font-bold tracking-wider text-left">
+        {`Game #${id}`}
+      </h1>
       {displayMatch()}
     </div>
   );
