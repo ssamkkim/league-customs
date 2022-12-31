@@ -39,7 +39,7 @@ const Match = () => {
       } else {
         seconds = String(
           (match[0].data.gameDuration % 60000).toFixed()
-        ).substring(0, 1);
+        ).substring(0, 2);
       }
       return (
         <div className="ml-5 mt-3 font-bold">{`${minutes}m ${seconds}s`}</div>
