@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 import { supabase } from '../../services/supabase';
 import type { matchesData } from '../../types/databaseTypes';
 import { Participant } from '../../types/schema';
+import { displayWinningScore, sortTeam } from '../../utils/utils';
 import MatchTeam from './MatchTeam';
 import { Team } from './types';
 
@@ -23,34 +24,6 @@ const Match = () => {
       .eq('id', id);
     setMatch(data);
   }
-
-  const sortTeam = (team: Participant[]) => {
-    let returnTeam = new Array<Participant>(5);
-    team.map((player: Participant) => {
-      let position = 0;
-      switch (player.INDIVIDUAL_POSITION) {
-        case 'TOP':
-          position = 0;
-          break;
-        case 'JUNGLE':
-          position = 1;
-          break;
-        case 'MIDDLE':
-          position = 2;
-          break;
-        case 'BOTTOM':
-          position = 3;
-          break;
-        case 'UTILITY':
-          position = 4;
-          break;
-        default:
-          break;
-      }
-      returnTeam[position] = player;
-    });
-    return returnTeam;
-  };
 
   const displayMatchDuration = () => {
     if (match && match.length >= 0) {
@@ -72,24 +45,6 @@ const Match = () => {
     }
   };
 
-  const displayWinningScore = () => {
-    if (match && match.length >= 0) {
-      return (
-        <div className="text-2xl font-bold tracking-wide">
-          {match[0].data.participants[0].WIN === 'Win' ? (
-            <span>
-              <span className="text-blue-800">1</span>-0
-            </span>
-          ) : (
-            <span>
-              0-<span className="text-blue-800">1</span>
-            </span>
-          )}
-        </div>
-      );
-    }
-  };
-
   const displayMatch = () => {
     if (match && match.length >= 0) {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
@@ -97,7 +52,7 @@ const Match = () => {
       return (
         <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-3/5 mx-auto">
           {displayMatchDuration()}
-          {displayWinningScore()}
+          {displayWinningScore(match[0])}
           <div className="flex flex-row justify-between items-center my-10">
             <MatchTeam team={team1} isLeft={true} />
             <MatchTeam team={team2} isLeft={false} />
