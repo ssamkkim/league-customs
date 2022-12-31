@@ -5,7 +5,7 @@ import { RightTeamComponent } from './types';
 
 const RightTeam: RightTeamComponent = ({ team }) => {
   return (
-    <div>
+    <>
       {team.map((player: Participant) => (
         <div className="flex flex-col border border-r-0 border-solid border-[#D6D6D6]">
           <div className="pt-1 px-4 font-bold text-base tracking-wide text-right">
@@ -29,7 +29,7 @@ const RightTeam: RightTeamComponent = ({ team }) => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -41,7 +41,9 @@ const Match = () => {
           (match[0].data.gameDuration % 60000).toFixed()
         ).substring(0, 1);
       }
-      return <div>{`${minutes}m ${seconds}s`}</div>;
+      return (
+        <div className="ml-5 mt-3 font-bold">{`${minutes}m ${seconds}s`}</div>
+      );
     }
   };
 
@@ -50,10 +52,12 @@ const Match = () => {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
-        <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-3/5 mx-auto">
+        <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-7/10 mx-auto">
           {displayMatchDuration()}
-          {displayWinningScore(match[0])}
-          <div className="flex flex-row justify-between items-center my-10">
+          <div className="flex justify-center">
+            {displayWinningScore(match[0])}
+          </div>
+          <div className="flex flex-row justify-between items-center mt-5 mb-10">
             <MatchTeam team={team1} isLeft={true} />
             <MatchTeam team={team2} isLeft={false} />
           </div>
