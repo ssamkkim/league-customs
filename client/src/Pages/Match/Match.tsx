@@ -52,12 +52,33 @@ const Match = () => {
     return returnTeam;
   };
 
+  const findMatchDuration = () => {
+    if (match && match.length >= 0) {
+      const minutes = Math.floor(match[0].data.gameDuration / 60000).toFixed();
+      let seconds = '';
+      const singleDigitSecond = String(
+        (match[0].data.gameDuration % 60000).toFixed()
+      ).substring(0, 1);
+      if (Number(singleDigitSecond) === 0) {
+        seconds = '0';
+      } else if (Number(singleDigitSecond) >= 6) {
+        seconds = singleDigitSecond;
+      } else {
+        seconds = String(
+          (match[0].data.gameDuration % 60000).toFixed()
+        ).substring(0, 1);
+      }
+      return <div>{`${minutes}m ${seconds}s`}</div>;
+    }
+  };
+
   const displayMatch = () => {
     if (match && match.length >= 0) {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
         <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-3/5 mx-auto">
+          {findMatchDuration()}
           <div className="flex flex-row justify-between items-center my-10">
             <MatchTeam team={team1} isLeft={true} />
             <MatchTeam team={team2} isLeft={false} />
