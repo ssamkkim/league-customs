@@ -52,7 +52,7 @@ const Match = () => {
     return returnTeam;
   };
 
-  const findMatchDuration = () => {
+  const displayMatchDuration = () => {
     if (match && match.length >= 0) {
       const minutes = Math.floor(match[0].data.gameDuration / 60000).toFixed();
       let seconds = '';
@@ -72,13 +72,32 @@ const Match = () => {
     }
   };
 
+  const displayWinningScore = () => {
+    if (match && match.length >= 0) {
+      return (
+        <div className="text-2xl font-bold tracking-wide">
+          {match[0].data.participants[0].WIN === 'Win' ? (
+            <span>
+              <span className="text-blue-800">1</span>-0
+            </span>
+          ) : (
+            <span>
+              0-<span className="text-blue-800">1</span>
+            </span>
+          )}
+        </div>
+      );
+    }
+  };
+
   const displayMatch = () => {
     if (match && match.length >= 0) {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
         <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-3/5 mx-auto">
-          {findMatchDuration()}
+          {displayMatchDuration()}
+          {displayWinningScore()}
           <div className="flex flex-row justify-between items-center my-10">
             <MatchTeam team={team1} isLeft={true} />
             <MatchTeam team={team2} isLeft={false} />
