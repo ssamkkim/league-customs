@@ -13,7 +13,7 @@ export const sortMatch = (match: matchesData): React.ReactElement => {
 
   return (
     <Link
-      className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto"
+      className="flex flex-row justify-around items-center p-5 my-2 bg-[#E4E4E4] w-3/4 h-28 mx-auto hover:bg-[#D3D3D3]"
       to={`/match/${match.id}`}
     >
       <Team team={team1} />
