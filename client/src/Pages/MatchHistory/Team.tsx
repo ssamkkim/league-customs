@@ -11,7 +11,7 @@ const Team: TeamComponent = ({ team }) => {
             src={`https://cdn.mobalytics.gg/assets/lol/images/dd/champions/icons/${player.SKIN.toLowerCase()}.png`}
             className="rounded-full w-12 h-12"
           ></img>
-          <div className="w-16 mt-1 flex items-center justify-center text-xs tracking-tight font-bold">
+          <div className="w-16 mt-1 flex items-center justify-center text-xs tracking-tight font-bold whitespace-nowrap">
             {player.NAME}
           </div>
         </div>
