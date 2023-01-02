@@ -1,4 +1,4 @@
-import { matchesData } from '../types/databaseTypes';
+import { matchesData, playerData } from '../types/databaseTypes';
 import { Participant } from '../types/schema';
 
 export const sortTeam = (team: Participant[]) => {
@@ -43,4 +43,12 @@ export const displayWinningScore = (match: matchesData) => {
       )}
     </div>
   );
+};
+
+export const findGamesLost = (p: playerData) => {
+  return p.games_played - p.games_won;
+};
+
+export const findLP = (p: playerData) => {
+  return 1000 + 10 * p.games_won - 5 * findGamesLost(p);
 };

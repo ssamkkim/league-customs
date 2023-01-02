@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { supabase } from '../../services/supabase';
 import type { playerData } from '../../types/databaseTypes';
+import { findLP } from '../../utils/utils';
 import PlayerRow from './PlayerRow';
 
 const Leaderboard = () => {
@@ -27,14 +28,6 @@ const Leaderboard = () => {
     } else {
       return 0;
     }
-  };
-
-  const findLP = (p: playerData) => {
-    return 1000 + 10 * p.games_won - 5 * findGamesLost(p);
-  };
-
-  const findGamesLost = (p: playerData) => {
-    return p.games_played - p.games_won;
   };
 
   return (
