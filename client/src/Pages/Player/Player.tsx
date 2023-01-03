@@ -23,14 +23,12 @@ const Player = () => {
   }
 
   return (
-    <div className="bg-[#F2F2F2] h-screen overflow-y-scroll">
+    <div className="flex items-center flex-col bg-[#F2F2F2] h-screen overflow-y-scroll">
       <Navbar />
-      <div className="flex justify-center">
-        <div className="w-1/2">
-          <div>{name}</div>
-          {player && player.length >= 0 ? <div>{findLP(player[0])}</div> : null}
-        </div>
-      </div>
+      <h1 className="mb-5 font-sans text-4xl font-bold tracking-wider text-left">
+        {name}
+      </h1>
+      {player && player.length >= 0 ? <div>{findLP(player[0])}</div> : null}
     </div>
   );
 };

@@ -13,7 +13,7 @@ const PlayerRow: PlayerRowComponent = ({
   const games_lost = games_played - games_won;
   const newTo = {
     pathname: `/player/${name}`,
-    rank,
+    rank: rank,
     games_played,
     games_won,
     games_lost,
