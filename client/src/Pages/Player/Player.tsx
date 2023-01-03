@@ -6,7 +6,7 @@ import { supabase } from '../../services/supabase';
 import type { playerData } from '../../types/databaseTypes';
 import { findLP } from '../../utils/utils';
 
-const Player = () => {
+const Player = (props: any) => {
   const [player, setPlayer] = useState<playerData[] | null>();
   const { name } = useParams();
 
@@ -29,6 +29,7 @@ const Player = () => {
         {name}
       </h1>
       {player && player.length >= 0 ? <div>{findLP(player[0])}</div> : null}
+      {/* {rank ? <div>{rank}</div> : null} */}
     </div>
   );
 };

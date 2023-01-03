@@ -11,17 +11,9 @@ const PlayerRow: PlayerRowComponent = ({
   lp,
 }) => {
   const games_lost = games_played - games_won;
-  const newTo = {
-    pathname: `/player/${name}`,
-    rank: rank,
-    games_played,
-    games_won,
-    games_lost,
-    lp,
-  };
   return (
     <Link
-      to={newTo}
+      to={`/player/${name}`}
       className="table-row font-sans text-white border border-collapse border-[#1C1C1F] bg-[#7B7A8E] hover:bg-[#31313C]"
     >
       <td className="py-4 px-5">{rank + 1}</td>
