@@ -6,9 +6,11 @@ import { supabase } from '../../services/supabase';
 import type { playerData } from '../../types/databaseTypes';
 import { findLP } from '../../utils/utils';
 
-const Player = (props: any) => {
+const Player = () => {
   const [player, setPlayer] = useState<playerData[] | null>();
-  const { name, rank } = useParams();
+  const [playerData, setPlayerData] = useState<playerData[] | null>();
+  // const [rank, setRank] = useState<number>();
+  const { name } = useParams();
 
   useEffect(() => {
     fetchPlayer();
@@ -22,6 +24,20 @@ const Player = (props: any) => {
     setPlayer(data);
   }
 
+  // async function fetchPlayers() {
+  //   const { data, error } = await supabase.from('players').select('*');
+  //   setPlayerData(data);
+  //   if (playerData && playerData.length) {
+  //     const sortedPlayers = playerData.sort(compare);
+  //     sortedPlayers.find((player, index) => {
+  //       if (player.name === name) {
+  //         setRank(index + 1);
+  //         console.log(rank);
+  //       }
+  //     });
+  //   }
+  // }
+
   return (
     <div className="flex items-center flex-col bg-[#F2F2F2] h-screen overflow-y-scroll">
       <Navbar />
@@ -29,7 +45,7 @@ const Player = (props: any) => {
         {name}
       </h1>
       {player && player.length >= 0 ? <div>{findLP(player[0])}</div> : null}
-      {rank}
+      {/* <div>{rank}</div> */}
     </div>
   );
 };

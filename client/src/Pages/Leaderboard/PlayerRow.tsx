@@ -13,7 +13,7 @@ const PlayerRow: PlayerRowComponent = ({
   const games_lost = games_played - games_won;
   return (
     <Link
-      to={`/player/${rank}/${name}`}
+      to={`/player/${name}`}
       className="table-row font-sans text-white border border-collapse border-[#1C1C1F] bg-[#7B7A8E] hover:bg-[#31313C]"
     >
       <td className="py-4 px-5">{rank}</td>

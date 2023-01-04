@@ -9,10 +9,10 @@ const Leaderboard = () => {
   const [playerData, setPlayerData] = useState<playerData[] | null>();
 
   useEffect(() => {
-    fetchMatches();
+    fetchPlayers();
   }, []);
 
-  async function fetchMatches() {
+  async function fetchPlayers() {
     const { data, error } = await supabase.from('players').select('*');
     setPlayerData(data);
   }
