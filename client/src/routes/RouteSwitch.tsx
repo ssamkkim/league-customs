@@ -12,7 +12,7 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/match-history" element={<MatchHistory />} />
-        <Route path="/player/:name" element={<Player />} />
+        <Route path="/player/:rank/:name" element={<Player />} />
         <Route path="/match/:id" element={<Match />} />
       </Routes>
     </BrowserRouter>

@@ -13,10 +13,10 @@ const PlayerRow: PlayerRowComponent = ({
   const games_lost = games_played - games_won;
   return (
     <Link
-      to={`/player/${name}`}
+      to={`/player/${rank}/${name}`}
       className="table-row font-sans text-white border border-collapse border-[#1C1C1F] bg-[#7B7A8E] hover:bg-[#31313C]"
     >
-      <td className="py-4 px-5">{rank + 1}</td>
+      <td className="py-4 px-5">{rank}</td>
       <td className="my-4 mr-10">
         <div className="w-full h-full">{name}</div>
       </td>

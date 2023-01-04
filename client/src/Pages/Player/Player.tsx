@@ -8,7 +8,7 @@ import { findLP } from '../../utils/utils';
 
 const Player = (props: any) => {
   const [player, setPlayer] = useState<playerData[] | null>();
-  const { name } = useParams();
+  const { name, rank } = useParams();
 
   useEffect(() => {
     fetchPlayer();
@@ -29,7 +29,7 @@ const Player = (props: any) => {
         {name}
       </h1>
       {player && player.length >= 0 ? <div>{findLP(player[0])}</div> : null}
-      {/* {rank ? <div>{rank}</div> : null} */}
+      {rank}
     </div>
   );
 };

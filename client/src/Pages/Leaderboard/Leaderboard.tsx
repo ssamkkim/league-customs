@@ -49,7 +49,7 @@ const Leaderboard = () => {
               .sort(compare)
               .map((player, rank) => (
                 <PlayerRow
-                  rank={rank}
+                  rank={rank + 1}
                   name={player.name}
                   games_won={player.games_won}
                   games_played={player.games_played}
