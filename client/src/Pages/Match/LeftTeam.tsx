@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { players } from '../../dummy_data/players';
 
 import { Participant } from '../../types/schema';
@@ -8,7 +9,10 @@ const LeftTeam: LeftTeamComponent = ({ team }) => {
   return (
     <>
       {team.map((player: Participant) => (
-        <div className="flex flex-col border border-l-0 border-solid border-[#D6D6D6] ">
+        <Link
+          to={`/player/${player.NAME}`}
+          className="flex flex-col border border-l-0 border-solid border-[#D6D6D6] hover:bg-[#D3D3D3]"
+        >
           <div className="pt-1 px-4 font-bold text-base tracking-wide">
             {player.NAME}
           </div>
@@ -28,7 +32,7 @@ const LeftTeam: LeftTeamComponent = ({ team }) => {
               )}`}</div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );
