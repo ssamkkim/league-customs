@@ -14,18 +14,18 @@ const PlayerRow: PlayerRowComponent = ({
   return (
     <Link
       to={`/player/${name}`}
-      className="table-row font-sans text-white border border-collapse border-[#1C1C1F] bg-[#7B7A8E] hover:bg-[#31313C]"
+      className="text-sm sm:text-base table-row font-sans text-white border border-collapse border-[#1C1C1F] bg-[#7B7A8E] hover:bg-[#31313C]"
     >
-      <td className="py-4 px-5">{rank}</td>
+      <td className="py-4 px-2 sm:px-5">{rank}</td>
       <td className="my-4 mr-10">
         <div className="w-full h-full">{name}</div>
       </td>
-      <td className="py-4 px-5">{lp}</td>
-      <td className="py-4 px-5">
+      <td className="py-4 px-2 sm:px-5">{lp}</td>
+      <td className="py-4 px-2 sm:px-5">
         {`${((games_won / games_played) * 100).toFixed(0)}%`}
       </td>
-      <td className="py-4 px-5">{`${games_won}W ${games_lost}L`}</td>
-      <td className="py-4 px-5">{games_played}</td>
+      <td className="py-4 px-2 sm:px-5">{`${games_won}W ${games_lost}L`}</td>
+      <td className="py-4 px-2 sm:px-5">{games_played}</td>
     </Link>
   );
 };

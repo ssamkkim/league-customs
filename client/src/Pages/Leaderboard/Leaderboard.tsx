@@ -36,13 +36,13 @@ const Leaderboard = () => {
         Leaderboard
       </h1>
       <table className="border border-collapse border-[#1C1C1F] mb-10">
-        <tr className="font-medium tracking-wide border border-collapse border-[#1C1C1F] bg-[#31313C] text-gray-300">
-          <td className="py-4 px-5">#</td>
-          <td className="py-4 pr-32">Player</td>
-          <td className="py-4 px-5">LP</td>
-          <td className="py-4 px-5">Win Rate</td>
-          <td className="py-4 px-5">Win - Loss</td>
-          <td className="py-4 px-5">Games Played</td>
+        <tr className="text-sm sm:text-base font-medium tracking-wide border border-collapse border-[#1C1C1F] bg-[#31313C] text-gray-300">
+          <td className="py-4 px-2 sm:px-5">#</td>
+          <td className="py-4 pr-28 sm:pr-32">Player</td>
+          <td className="py-4 px-2 sm:px-5">LP</td>
+          <td className="py-4 px-2 sm:px-5">Win Rate</td>
+          <td className="py-4 px-2 sm:px-5">Win - Loss</td>
+          <td className="py-4 px-2 sm:px-5">Games Played</td>
         </tr>
         {playerData && playerData.length
           ? playerData

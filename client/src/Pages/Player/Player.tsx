@@ -3,18 +3,25 @@ import { useParams } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar';
 import { supabase } from '../../services/supabase';
-import type { playerData } from '../../types/databaseTypes';
+import type { matchesData, playerData } from '../../types/databaseTypes';
 import { findLP } from '../../utils/utils';
 
 const Player = () => {
   const [player, setPlayer] = useState<playerData[] | null>();
-  const [playerData, setPlayerData] = useState<playerData[] | null>();
+  // const [playerMatches, setPlayerMatches] = useState<matchesData[] | null>();
+  // const [playerData, setPlayerData] = useState<playerData[] | null>();
   // const [rank, setRank] = useState<number>();
   const { name } = useParams();
 
   useEffect(() => {
     fetchPlayer();
   }, []);
+
+  // useEffect(() => {
+  //   fetchPlayerMatches();
+  //   console.log(JSON.stringify(playerMatches));
+  //   // console.log(playerMatches);
+  // }, []);
 
   async function fetchPlayer() {
     const { data, error } = await supabase
@@ -23,6 +30,14 @@ const Player = () => {
       .eq('name', name);
     setPlayer(data);
   }
+
+  // async function fetchPlayerMatches() {
+  //   const { data, error } = await supabase
+  //     .from('matches')
+  //     .select('*')
+  //     .textSearch(name);
+  //   setPlayerMatches(data);
+  // }
 
   // async function fetchPlayers() {
   //   const { data, error } = await supabase.from('players').select('*');
