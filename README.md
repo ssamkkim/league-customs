@@ -39,6 +39,7 @@
 
 - Leaderboard
 - Match History
+- Match Stats
 - ...
 
 ## How To Use
