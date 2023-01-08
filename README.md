@@ -38,11 +38,11 @@
 ## Features
 
 - Leaderboard
-  ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/leaerboard.png)
+  <!-- ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/leaerboard.png) -->
 - Match History
-  ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/matchhistory.png)
+  <!-- ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/matchhistory.png) -->
 - Match Stats
-  ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/match.png)
+  <!-- ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/match.png) -->
 - ...
 
 ## How To Use
