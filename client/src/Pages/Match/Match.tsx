@@ -52,7 +52,7 @@ const Match = () => {
       const team1 = sortTeam(match[0].data.participants.slice(0, 5));
       const team2 = sortTeam(match[0].data.participants.slice(5));
       return (
-        <div className="flex flex-col justify-end bg-[#E4E4E4] w-1/2 h-7/10 mx-auto">
+        <div className="flex flex-col justify-end bg-[#E4E4E4] w-full md:w-3/4 lg:w-1/2 h-7/10 mx-auto">
           {displayMatchDuration()}
           <div className="flex justify-center">
             {displayWinningScore(match[0])}
