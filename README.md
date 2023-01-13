@@ -43,6 +43,7 @@
   <!-- ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/matchhistory.png) -->
 - Match Stats
   <!-- ![screenshot](https://github.com/ssamkkim/league-customs/blob/main/client/src/assets/match.png) -->
+- Profile (in progress)
 - ...
 
 ## How To Use
